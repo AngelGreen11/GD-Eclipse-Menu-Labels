@@ -16,7 +16,7 @@
         },
         {
             "color": "7BEAFFFF",
-            "condition": "progress - runStart > bestRun - runFrom && !isPlatformer && (progress < best+1 || (cfg('global.safemode') == true && cfg('global.safemode.freeze_best_run') == true) || isPracticeMode || isTestMode) && (!isCheating || cfg('global.safemode.freeze_best_run') == false)",
+            "condition": "progress - runStart > bestRun - runFrom && !isPlatformer && (progress < best+1 || (cfg('global.safemode') == true && cfg('global.safemode.freeze_best_run') == false) || isPracticeMode || isTestMode) && (!isCheating || cfg('global.safemode.freeze_best_run') == false)",
             "delay": 0.0,
             "duration": 0.0,
             "easing": 0.0,
