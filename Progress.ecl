@@ -30,6 +30,6 @@
     "offset-x": 0.0,
     "offset-y": 0.0,
     "scale": 0.5,
-    "text": "{!isPlatformer ? (isPracticeMode ? $'{emojis.practice}{precision(runStart,1)}-' : isTestMode ?? $'{emojis.startPos}{precision(runStart,1)}-') + $'{\n\ncfg(\"bypass.unlockmainlevels\")\n\n== false ? precision(progress,1) : precision(playerX * 100 / levelLength, 1)}%' : time}",
+    "text": "{!isPlatformer ? (isPracticeMode ? $'{emojis.practice}{\n\nprecision(runStart,1)\n\n}-' : isTestMode ?? $'{emojis.startPos}{\n\nprecision(runStart,1)\n\n}-') + $'{\n\ncfg(\"bypass.unlockmainlevels\")\n\n== false ? \n\nprecision(progress,1)\n\n : precision(playerX * 100 / levelLength, 1)}%' : time}",
     "visible": true
 }
