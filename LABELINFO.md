@@ -1,4 +1,7 @@
 # Label Info
+
+`(Code)`: Setting in the text field of the label settings. They are separated with enters (Enters only visible in PC with default view (Imgui)).  
+`(Events)`: Setting in the Events section of the label settings. They are in the same order here and ingame.  
 Some labels use "useless" settings, more info at the bottom of this file.  
 
 ## 2P CPS
@@ -9,8 +12,8 @@ Some labels use "useless" settings, more info at the bottom of this file.
 > Known issue: Eclipse doesn't have a way to check if a level is 2P, so the label's 2P mode also activates for 1P duals.
 
 ## Best Run
-* **Best run in session.** If the run is from 0%, it will only show the run's end.
-
+* **Best run in session.** If the run is from 0%, it will only show the run's end. By default the label is placed on the left of the progress bar, disable this by turning off the "Absolute position" setting and setting the position to top left.
+(Event) Hide label: hides when the level is platformer.
 (Event) New best run: turns the label blue when you're currently getting a new best run (when is not cheating or freeze best run in safe mode is off).  
 
 ## Best
@@ -23,28 +26,38 @@ Some labels use "useless" settings, more info at the bottom of this file.
 
 
 ## FPS and GlobedPing
-* **Game FPS and Globed ping.** Hides ping if not connected to a Globed server.
+* **Game FPS and Globed mod ping.** Hides ping if not connected to a Globed server.
 
 ## Framestepper Frame
 * **Shows your current frame if the framestepper mod is enabled.**
 
 ## Last Death
 * **Percentage of your last death.** Also works with noclip.
+
 (Event) Hide label: hides when it's attempt 1 and you have 0 noclip deaths, when you haven't died in your GD session, or when the level is platformer.
 
 ## Level Time
-* **Current time of the level in seconds and the total level time for 2.2 levels.**  
+* **Current time of the level in seconds and the total level time for 2.2 levels.**
+
 (Event) Hide label: hides when the level is platformer.
 
 ## Noclip Accuracy and Limit
-* **Noclip accuracy if noclip is enabled and the limit if it's enabled.**  
+* **Noclip accuracy if noclip is enabled and the limit if it's enabled.**
+
 (Event) On noclip death: turns label red.
 
 ## Noclip Deaths and Limit
-* **Noclip deaths if noclip is enabled and the limit if it's enabled.**  
+* **Noclip deaths if noclip is enabled and the limit if it's enabled.**
+
 (Event) On noclip death: turns label red.
 > Known issue: shows label as "null" if you have death limit on but haven't changed it on your GD session.
 
 ## Progress
 * **Shows level percentage or platformer time.** On practice and startpos shows your run's start with a corresponding Eclipse emoji.
-(Code) 
+
+(Code) Percentage decimals: change the number in `precision(progress,#)` to change the amount of decimals shown.  
+(Code) Run's start decimals: change the number in **both** `precision(runStart,#)` to change the amount of decimals shown.  
+(Code) 2.1 percentage: use a "useless" setting to turn on the old percentage, by default Unlock Main Levels. Note that this won't change other percentages, such as run's start, best run, etc.  
+(Event) Golden Best: like the Geode mod, turns the font to gold (optionally a solid color) when you're achieving a new best. Turns off if you're in practice or startpos, if safemode is on, and if you're cheating while auto safe mode is on.  
+(Event) New best run: turns the label color to blue if you're getting a new best run. Turns off when the Golden Best event is currently functioning and when you're cheating while the freeze best run setting in safe mode is active.
+> Known issues: the platformer time only shows the time you spent without counting deaths (you can check the real time in the pause menu), and other mods from Eclipse or Geode can't affect the label because it's impossible to do so.
